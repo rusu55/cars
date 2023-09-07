@@ -17,7 +17,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}) => {
             .replace(/\s+/g, "")
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
-
+        console.log("Refreshed Manufacturer")
   return (
     <div className='search-manufacturer'>
         <Combobox>
@@ -39,17 +39,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}) => {
                         placeholder='Volkswagen...'
                         onChange={(e) => setQuery(e.target.value)}
                     />
-                    <Transition
-                        as={Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
-                        leave='transition ease-in duration-100'
-                        leaveFrom='opacity-100'
-                        leaveTo='opacity-0'
-                        afterLeave={() => setQuery("")} // Reset the search query after the transition completes
-                    >
-                        <Combobox.Options>
-                            {filteredManufacturers.length === 0 && }
-                        </Combobox.Options>
-                    </Transition>
+                    
             </div>
         </Combobox>
     </div>

@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import {NavBar, Footer} from '@components';
+import {NavBar, Footer, Provider} from '@components';
 
 export const metadata = {
   title: "Car Hub",
@@ -10,9 +10,11 @@ const RootLayout = ({children}) => {
   return (
     <html lang='en'>
       <body className='relative'>
-        <NavBar />
-        {children}
-        <Footer />
+        <Provider>
+          <NavBar />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   )

@@ -23,7 +23,7 @@ const SearchBar = () => {
   const handleSearch = (e) =>{
     e.preventDefault();
   }
-
+  console.log("Refreshed Search Bar")
   return (
     <form className='searchbar' onSubmit={handleSearch}>
          <div className='searchbar__item'>
